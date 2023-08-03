@@ -398,10 +398,10 @@
       <p class="modal_title">Leave your contacts and we will call you back</p>
       <form class="modal_form" name="user_form">
         <div class="modal_field">
-          <label class="form_label" for="Name">Name</label>
+          <label class="form_label" for="user-name">Name</label>
           <div class="modal_input_wrap">
-            <input class="form_input" type="text" id="Name" name="Name">
-            <svg class="modal_icon" width="18" height="18">
+            <input class="form_input" type="text" id="user-name" name="user-name">
+            <svg class="modal_icon" width="18" height="24">
               <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
             </svg>
           </div>
@@ -409,7 +409,7 @@
         <div class="modal_field">
           <label class="form_label" for="Phone">Phone</label>
           <div class="modal_input_wrap">
-            <input class="form_input" type="text" id="Phone" name="Email">
+            <input class="form_input" type="text" id="Phone" name="Phone">
             <svg class="modal_icon" width="18" height="24">
               <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
             </svg>
@@ -425,8 +425,12 @@
           </div>
         </div>
         <div class="modal_field">
-          <ladel class="user_text">Comment</ladel>
-          <textarea name="user_text" id="user_text" class="modal_comment" placeholder="Text input"></textarea>
+          <ladel for="user-comment" class="user_text">Comment</ladel>
+          <textarea name="user-comment" id="user-comment" class="modal_comment" placeholder="Text input"></textarea>
+        </div>
+        <div class="modal_checboxs">
+           <input id="user-privacy"  type="checkbox"  value="true" name="user-privacy"  visually-hidden>
+           <label class="ladel_checboxs" for="user-privacy">I accept the terms and conditions of the</label>
         </div>
         <button class="form_button" type="submit">Send</button>
       </form>

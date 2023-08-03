@@ -497,7 +497,7 @@ h4 {
 }
 
 .footer_form {
-margin-left: 80px;
+  margin-left: 80px;
 }
 
 .footer_form_title {
@@ -512,13 +512,13 @@ margin-left: 80px;
 
 .form_social_footer {
   gap: 24px;
-display: flex;  
+  display: flex;
 }
 
 .footer_form_wrap {}
 
 .label_footer {
-color: #ffffff;
+  color: #ffffff;
 }
 
 
@@ -563,9 +563,9 @@ color: #ffffff;
   display: flex;
 }
 
-.footer_form_icon{
-margin-left: 16;
-fill: #FFF;
+.footer_form_icon {
+  margin-left: 16px;
+  fill: #FFF;
 }
 
 /*----------------------------------------------- PORTFOLIO--------------------------- */
@@ -686,7 +686,7 @@ fill: #FFF;
   color: var(--slate);
 }
 
-/* -------------------modal */
+/* -------------------modal------------------- */
 
 .backdrop {
   height: 100%;
@@ -700,7 +700,7 @@ fill: #FFF;
 }
 
 .modal {
-  padding: 72px 24px 0 24px;
+  padding: 72px 24px 24px 24px;
   min-width: 408px;
   min-height: 584px;
   border-radius: 4px;
@@ -767,6 +767,10 @@ fill: #FFF;
   margin-bottom: 18px;
 }
 
+.modal_field {
+  margin-bottom: 8px;
+}
+
 input {
   border: none;
   outline: none;
@@ -776,8 +780,11 @@ input {
   width: 360px;
   height: 40px;
   border-radius: 4px;
-  border: 1px solid var(--navyblue);
+  border: 1px solid rgba(46, 47, 66, 0.4);
   padding-left: 38px;
+  background-color: transparent;
+  outline: transparent;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -785,8 +792,10 @@ input {
   color: var(--lightslate, #8E8F99);
   font-family: Roboto;
   font-size: 12px;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  display: block;
+  margin-bottom: 4px;
 }
 
 
@@ -823,14 +832,21 @@ input {
   top: 50%;
   left: 16px;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal_input_wrap:hover {
   fill: var(--iris);
 }
 
-.form_input:hover {
+/* .form_input:hover {
   border-color: var(--iris);
+  fill: #4D5AE5;
+} */
+
+.form_input:focus {
+  border-color: #4D5AE5;
+  fill: #4D5AE5;
 }
 
 .user_text {
@@ -847,9 +863,31 @@ input {
 .modal_comment {
   width: 360px;
   height: 120px;
-  color: var(--navyblue-modal);
+  color: rgba(46, 47, 66, 0.4);
   font-family: "Roboto", sans-serif;
   font-size: 12px;
-  line-height: 1.5;
+  line-height: 1.17;
   letter-spacing: 0.04em;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+  background-color: transparent;
+  padding: 8px 16px;
+  outline: transparent;
+  resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal_comment:focus{
+border-color: #4D5AE5;
+}
+.modal_checboxs{
+margin-bottom: 24px;
+}
+
+.ladel_checboxs{
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: #8e8f99;
+
 }
