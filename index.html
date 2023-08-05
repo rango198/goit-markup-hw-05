@@ -428,9 +428,16 @@
           <ladel for="user-comment" class="user_text">Comment</ladel>
           <textarea name="user-comment" id="user-comment" class="modal_comment" placeholder="Text input"></textarea>
         </div>
-        <div class="modal_checboxs">
-           <input id="user-privacy"  type="checkbox"  value="true" name="user-privacy"  visually-hidden>
-           <label class="ladel_checboxs" for="user-privacy">I accept the terms and conditions of the</label>
+        <div class="modal_checbox">
+          <input class="modal_chec visually-hidden" id="user-privacy" type="checkbox" value="true" name="user-privacy">
+          <label class="ladel_checbox" for="user-privacy">
+            <span>
+              <svg class="modal_chec_icon" width="12" height="12">
+                <use href="./images/icons.svg#icon-Vector"></use>
+              </svg>
+            </span>
+            I accept the terms and conditions of the
+            <a href="" class="modal_checbox_link">Privacy Policy</a></label>
         </div>
         <button class="form_button" type="submit">Send</button>
       </form>
