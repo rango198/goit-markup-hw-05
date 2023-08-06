@@ -764,7 +764,7 @@ h4 {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
 .modal_field {
@@ -800,24 +800,25 @@ input {
 
 
 .form_button {
-  display: flex;
-    justify-content: center;
-    align-items: center;
+  min-width: 169px;
+  display: block;
+  margin: 0 auto;
   width: 169px;
   height: 56px;
   padding: 16px 32px;
   border-radius: 4px;
   background: var(--iris, #4D5AE5);
- border: none;
+  border: none;
   color: var(--white, #FFF);
   text-align: center;
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
-  line-height: 1.17;
+  line-height: 1.5;
   letter-spacing: 0.04em;
   cursor: pointer;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form_button:hover {
@@ -838,30 +839,19 @@ input {
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal_input_wrap:hover {
+.modal_input_wrap:focus-within {
   fill: var(--iris);
 }
 
-/* .form_input:hover {
+.form_input:focus-within {
   border-color: var(--iris);
-  fill: #4D5AE5;
-} */
-
-.form_input:focus {
-  border-color: #4D5AE5;
-  fill: #4D5AE5;
 }
 
-.user_text {
-  display: block;
-  color: var(--lightslate, #8E8F99);
-  font-family: "Roboto", sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 1.5;
-  letter-spacing: 0.03em;
 
+.modal_field {
+  margin-bottom: 16px;
 }
+
 
 .modal_comment {
   width: 360px;
@@ -881,7 +871,7 @@ input {
 }
 
 .modal_comment:focus {
-  border-color: #4D5AE5;
+  border-color: var(--iris);
 }
 
 .modal_checbox {
@@ -897,21 +887,27 @@ input {
   color: #8e8f99;
   display: flex;
   align-items: center;
- }
+}
 
-.ladel_checbox span {
-  width: 16px;
-  height: 16px;
+.wrap_chec_iocn {
+  display: flex;
+  align-items: center;
+}
+
+ .ladel_checbox .wrap_chec_iocn {
+  width: 10px;
+  height: 8px;
   border: 1px solid rgba(46, 47, 66, 0.40);
   border-radius: 2px;
   margin-right: 8px;
   display: flex;
-    align-items: center;
-    justify-content: center;
-    fill: transparent;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
 }
 
-.modal_chec:checked + .ladel_checbox span {
-background-color: var(--iris);
-fill: var(--white);
+.modal_chec:checked+.ladel_checbox .wrap_chec_iocn {
+  background-color: var(--ocean);
+  fill: var(--white);
+  border: none;
 }
