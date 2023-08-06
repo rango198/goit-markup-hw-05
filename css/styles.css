@@ -852,7 +852,7 @@ input {
   margin-bottom: 8px;
 }
 
-.modal_field_txt {
+.modal_field_textarea {
   margin-bottom: 16px;
 }
 
@@ -889,27 +889,25 @@ input {
   line-height: 1.17;
   letter-spacing: 0.04em;
   color: #8e8f99;
-  display: flex;
-  align-items: center;
+
 }
 
 .wrap_chec_iocn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.ladel_checbox .wrap_chec_iocn {
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.40);
   border-radius: 2px;
   margin-right: 8px;
-  display: flex;
   align-items: center;
   justify-content: center;
   fill: transparent;
 }
+
+
 
 .modal_chec:checked+.ladel_checbox .wrap_chec_iocn {
   background-color: var(--ocean);
@@ -917,6 +915,6 @@ input {
   border: none;
 }
 
-.modal_field_txt {
+.modal_checbox_link {
   color: var(--iris)
 }
